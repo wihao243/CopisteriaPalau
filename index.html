@@ -12,6 +12,32 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    // Inicializar EmailJS (tu public key)
+    emailjs.init("hfHVPCDvlhsYhEJlh");
+
+    const form = document.getElementById("formulario");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        emailjs.sendForm("service_d3vehhg", "template_gh9qgwg", this)
+            .then(function(response) {
+                console.log("SUCCESS!", response);
+                alert("Mensaje enviado correctamente ✅");
+                form.reset(); // limpia el formulario
+            })
+            .catch(function(error) {
+                console.log("ERROR:", error);
+                alert("Error al enviar ❌");
+            });
+    });
+
+});
+</script>
+
 <body>
 
   <header class="hero">
@@ -278,21 +304,5 @@
 
   </div>
 </footer>
-<script type="module">
-emailjs.init("hfHVPCDvlhsYhEJlh");
-
-document.getElementById("formulario").addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    emailjs.sendForm("service_bykmlyc", "template_gh9qgwg", this)
-        .then(function() {
-            alert("Mensaje enviado correctamente ✅");
-        })
-        .catch(function(error) {
-            console.log("ERROR:", error);
-            alert("Error al enviar ❌");
-        });
-});
-</script>
 </body>
 </html>
