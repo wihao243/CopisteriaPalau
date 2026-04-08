@@ -1,0 +1,285 @@
+:root{
+  --accent:#ff8a2b;
+  --muted:#6b7280;
+  --card-bg:#ffffff;
+  --card-border:#edf2f7;
+  --shadow: 0 6px 18px rgba(11,22,39,0.06);
+  --radius:12px;
+  --max-width:1100px;
+  font-family: Inter, Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:#f7fafc;
+  color:#0b1227;
+}
+
+.hero{
+  background-image: linear-gradient(135deg, rgba(7,46,89,0.82), rgba(24,85,173,0.72)),
+  url('../img/CopipalauAfuera.png');
+  background-size: cover;
+  background-position: center;
+  color:#fff;
+  padding:56px 20px;
+}
+
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+}
+
+.hero-grid{
+  display:flex;
+  gap:32px;
+  padding:20px 0 60px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:28px;
+  font-weight:700;
+}
+
+.logo .icon{
+  width:44px;
+  height:44px;
+  background:rgba(255,255,255,0.16);
+  border-radius:8px;
+  display:grid;
+  place-items:center;
+}
+
+.hero h1{
+  margin:16px 0 12px;
+  font-size:40px;
+}
+
+.lead{
+  font-size:16px;
+  margin-bottom:20px;
+  color:rgba(255,255,255,0.9);
+}
+
+.buttons{
+  display:flex;
+  gap:12px;
+  margin-top:18px;
+}
+
+.buttonszoom{
+  transition: transform 0.3s ease;
+}
+
+.buttonszoom:hover {
+  transform: scale(1.1);
+}
+
+.btn{
+  padding:10px 16px;
+  border-radius:10px;
+  font-weight:600;
+  text-decoration:none;
+  display:inline-flex;
+}
+
+.btn-primary{
+  background:var(--accent);
+  color:white;
+}
+
+.btn-ghost{
+  background:transparent;
+  border:1px solid rgba(255,255,255,0.2);
+  color:white;
+}
+
+.hero-sidebox{
+  flex-basis:260px;
+  background:rgba(255,255,255,0.1);
+  padding:16px;
+  border-radius:10px;
+}
+
+.fila-centrada {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    grid-column: 1 / -1;
+}
+
+.fila-centrada .card {
+    flex: 0 0 auto;
+}
+
+.section{
+  padding:50px 20px;
+}
+
+.title{
+  text-align:center;
+}
+
+.title .desc{
+  color:var(--muted);
+  margin-top:6px;
+}
+
+.cards{
+  margin-top:30px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.card{
+  background:var(--card-bg);
+  border-radius:12px;
+  padding:20px;
+  box-shadow:var(--shadow);
+  border:1px solid var(--card-border);
+  display:flex;
+  flex-direction:column;
+}
+
+.card .top{
+  display:flex;
+  justify-content:space-between;
+}
+
+.top .left{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.card .icon{
+  width:44px;
+  height:44px;
+  background:#f1f8ff;
+  display:grid;
+  place-items:center;
+  border-radius:10px;
+}
+
+.card .muted{
+  color:var(--muted);
+  font-size:13px;
+}
+
+.card ul{
+  margin:10px 0 0 18px;
+  padding:0;
+  color:var(--muted);
+}
+
+.card .details{
+  margin-top:auto;
+  color:#2563eb;
+  font-size:13px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.card.large{
+  grid-column:span 3;
+  display:flex;
+  justify-content:space-between;
+}
+
+.footer{
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+}
+
+@media (max-width:1000px){
+  .cards{grid-template-columns:repeat(2,1fr);}
+  .hero h1{font-size:34px;}
+}
+
+@media (max-width:700px){
+  .cards{grid-template-columns:1fr;}
+  .card.large{grid-column:span 1;}
+  .hero-grid{flex-direction:column;}
+  .hero h1{font-size:28px;}
+}
+
+.design-card{
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.design-card h3{
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.design-card p{
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.design-card .icon{
+    font-size: 40px;
+    background: linear-gradient(135deg, #ff8a2b, #ffb36b);
+    color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.design-card:hover{
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.design-card.destacado{
+    background: linear-gradient(135deg, #0d47a1, #1976d2);
+    color: white;
+}
+
+.design-card.destacado p{
+    color: rgba(255,255,255,0.9);
+}
+
+.design-card.destacado .icon{
+    background: rgba(255,255,255,0.2);
+}
+
+.service-card{
+    text-align: center;
+    gap: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.service-card h3{
+    margin-top: 12px;
+    font-size: 20px;
+}
+
+.service-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}

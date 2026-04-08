@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #22d3ee;
+    --primary-soft: #67e8f9;
+    --bg: #ecfeff;
+    --card-bg: rgba(255,255,255,0.75);
+    --border: rgba(0,0,0,0.06);
+    --text: #0b1227;
+    --muted: #475569;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(180deg, #e0faff, #ecfeff);
+    color: var(--text);
+}
+
+.hero {
+    background: linear-gradient(135deg, #22d3ee, #67e8f9);
+    padding: 80px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.back-link {
+    color: #0b1227;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 22px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.hero h1 {
+    font-size: 44px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+.section {
+    padding: 80px 20px;
+}
+
+.cards {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 36px;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 28px;
+    padding: 32px 26px;
+    text-align: center;
+    border: 1px solid var(--border);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.6),
+        0 15px 30px rgba(0,0,0,0.08);
+    transition: transform 0.35s cubic-bezier(.34,1.56,.64,1),
+                box-shadow 0.35s ease;
+}
+
+.card:hover {
+    transform: scale(1.06);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.8),
+        0 25px 45px rgba(34,211,238,0.35);
+}
+
+.card .icon {
+    font-size: 28px;
+    margin-bottom: 14px;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.card img {
+    width: 100%;
+    max-width: 180px;
+    border-radius: 20px;
+    border: 1px solid rgba(0,0,0,0.08);
+    transition: transform 0.35s cubic-bezier(.34,1.56,.64,1);
+}
+
+.card:hover img {
+    transform: scale(1.08) rotate(-1deg);
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+}

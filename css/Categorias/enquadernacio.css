@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #7c3aed;
+    --primary-glow: #a78bfa;
+    --bg: #0f0a1e;
+    --card-bg: rgba(255,255,255,0.08);
+    --border: rgba(255,255,255,0.18);
+    --text: #ffffff;
+    --muted: rgba(255,255,255,0.7);
+    font-family: "Inter", Arial, sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at top, #1e1138, #0f0a1e);
+    color: var(--text);
+}
+
+.hero {
+    background: linear-gradient(135deg, #5b21b6, #7c3aed);
+    padding: 80px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.back-link {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 22px;
+    transition: opacity 0.3s ease;
+}
+
+.back-link:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.hero h1 {
+    font-size: 44px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+.section {
+    padding: 80px 20px;
+}
+
+.cards {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 34px;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 0 0 rgba(124,58,237,0);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(167,139,250,0.25),
+        transparent
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 35px rgba(167,139,250,0.45);
+}
+
+.card .icon {
+    font-size: 26px;
+    margin-bottom: 14px;
+    opacity: 0.9;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+.images {
+    display: flex;
+    gap: 12px;
+}
+
+.images.single {
+    justify-content: center;
+}
+
+.card img {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.15);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover img {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(167,139,250,0.5);
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .images {
+        flex-direction: column;
+        align-items: center;
+    }
+}

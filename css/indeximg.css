@@ -1,0 +1,60 @@
+.imglogotipo {
+    width: 45px;
+    height: 45px;
+    transition: transform 0.3s ease;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.imglogotipo:hover {
+    transform: scale(1.1);
+}
+
+.img50 {
+    width: 250px;
+    height: 180px;
+    transition: transform 0.3s ease;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.img50:hover {
+    transform: scale(1.1);
+}
+
+.imgborde {
+    border: 2px solid black;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.imgborde:hover {
+    transform: scale(1.1);
+}
+
+.imgcenter {
+    width: 200px;
+    height: auto;
+}
+
+.imgcenter2 {
+    width: 350px;
+    height: auto;
+}
+
+.imgzoom {
+    transition: transform 0.3s ease, 
+    top 0.3s ease, 
+    left 0.3s ease;
+    position: relative;
+    cursor: zoom-in;
+}
+
+.imgzoom:hover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(3); 
+    z-index: 1000;
+    cursor: zoom-out;
+}

@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Copisteria Palau</title>
+  <link rel="icon" href="img/log.png">
+  <link rel="stylesheet" href="css/index2.css">
+  <link rel="stylesheet" href="css/indeximg.css">
+  <link rel="stylesheet" href="css/contacto.css">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="module">
+emailjs.init("hfHVPCDvlhsYhEJlh");
+
+document.getElementById("formulario").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_bykmlyc", "template_gh9qgwg", this)
+        .then(function() {
+            alert("Mensaje enviado correctamente ✅");
+        })
+        .catch(function(error) {
+            console.log("ERROR:", error);
+            alert("Error al enviar ❌");
+        });
+});
+</script>
+
+<body>
+
+  <header class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-left">
+          <div class="logo">
+            <div class="icon"><img class="imglogotipo" src="/img/Palau.png" alt="LogoCopipalau"></div>
+            COPISTERIA PALAU
+          </div>
+
+          <h1>AFANY EN SERVIR CADA DIA MILLOR</h1>
+          <p class="lead">
+            3 plantes al seu serveì
+          </p>
+          <p class="lead">
+            Qualitat, Rapidesa i Bon preu
+          </p>
+
+          <div class="buttons">
+            <a href="#formulario" class="btn btn-primary buttonszoom">Contacta'ns ➜</a>
+            <a href="#servicios" class="btn btn-ghost buttonszoom">Serveis</a>
+            <a href="html/nosaltres.html" class="btn btn-ghost buttonszoom">Qui som?</a>
+          </div>
+        </div>
+
+        <div class="hero-sidebox">
+          <img src="img/50 anys copi.jpg" alt="50 anys" class="img50">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="servicios" class="section">
+      <div class="container">
+        <div class="title">
+          <h2>Els nostres serveis</h2>
+          <p class="desc">Solucions completes d'impressió i copiat per a particulars i empreses</p>
+        </div>
+
+        <div class="cards">
+          <article class="card" style="background-color: yellow;">
+            <div class="top">
+              <div class="left">
+                <div class="icon">📄</div>
+                <div>
+                  <h3>Tipus de paper</h3>
+                  <p class="muted">PAPERS/CARTOLINES</p>
+                </div>
+              </div>
+              <div class="arrow">›</div>
+            </div>
+            <ul>
+              <li>BLANC de 80-160 grs.</li>
+              <li>MATE de 90 grs.</li>
+              <li>BRILLANT de 90 grs.</li>
+            </ul>
+            <a class="details" href="html/tiposdepapel.html">Veure detalls ➜</a>
+          </article>
+
+          <article class="card" style="background-color: orange;">
+            <div class="top">
+              <div class="left">
+                <div class="icon">🗳️</div>
+                <div>
+                  <h3>Impressió</h3>
+                  <p class="muted">Impressió en blanc i negre o color.</p>
+                </div>
+              </div>
+              <div class="arrow">›</div>
+            </div>
+            <ul>
+              <li>A4, A3, A5</li>
+              <li>Color y B/N</li>
+              <li>Alta resolució</li>
+              <br>
+            </ul>
+            <a class="details" href="html/impressio.html">Veure detalls ➜</a>
+          </article>
+
+          <article class="card" style="background-color: red; color: white;">
+            <div class="top">
+              <div class="left">
+                <div class="icon">📠</div>
+                <div>
+                  <h3>Fotocòpies</h3>
+                  <p class="muted" style="color: white;">Còpies ràpides amb la millor qualitat i preu.</p>
+                </div>
+              </div>
+              <div class="arrow">›</div>
+            </div>
+            <ul style="color: white;">
+              <li>Reducció/ampliació</li>
+              <li>Doble cara</li>
+              <li>Grans volums</li>
+            </ul>
+            <a class="details" href="html/fotocopies.html" style="color: white;">Veure detalls ➜</a>
+          </article>
+
+          <article class="card" style="background-color: purple; color: white;">
+            <div class="top">
+              <div class="left">
+                <div class="icon">📚</div>
+                <div>
+                  <h3>Enquadernació</h3>
+                  <p class="muted" style="color: white;">Diversos tipus d'enquadernació pels teus projectes.</p>
+                </div>
+              </div>
+              <div class="arrow">›</div>
+            </div>
+            <ul style="color: white;">
+              <li>Espiral</li>
+              <li>Encolat</li>
+              <li>Format Revista</li>
+              <li>Chanel Tapes Rigides</li>
+              <br>
+            </ul>
+            <a class="details" href="html/enquadernacio.html" style="color: white;">Veure detalls ➜</a>
+          </article>
+
+          <article class="card" style="background-color: blue; color: white;">
+            <div class="top">
+              <div class="left">
+                <div class="icon">📷</div>
+                <div>
+                  <h3>Escaneig</h3>
+                  <p class="muted" style="color: white;">Digitalització en alta qualitat.</p>
+                </div>
+              </div>
+              <div class="arrow">›</div>
+            </div>
+            <ul style="color: white;">
+              <li>PDF/JPEG</li>
+              <li>Alta resolució</li>
+              <li>Enviament per email</li>
+            </ul>
+            <a class="details" href="html/escaneig.html" style="color: white;">Veure detalls ➜</a>
+          </article>
+
+          <article class="card" style="background-color: aqua;">
+            <div class="top">
+              <div class="left">
+                <div class="icon">🔖</div>
+                <div>
+                  <h3>Plastificat</h3>
+                  <p class="muted">Protecció duradora pels teus documents.</p>
+                </div>
+              </div>
+              <div class="arrow">›</div>
+            </div>
+            <ul>
+              <li>Diverses mides A5, A4, A3</li>
+              <li>Mate/Brillant</li>
+              <li>Ràpid</li>
+            </ul>
+            <a class="details" href="html/plastificat.html">Veure detalls ➜</a>
+          </article>
+
+          <article class="card" style="background-color: aquamarine;">
+            <div class="top">
+              <div class="left">
+                <div class="icon">🎨</div>
+                <div>
+                  <h3>Disseny</h3>
+                  <p class="muted">Disseny gràfic per a targetes i flyers.</p>
+                </div>
+              </div>
+              <div class="arrow">›</div>
+            </div>
+            <ul>
+              <li>Targetes</li>
+              <li>Flyers</li>
+              <li>Cartells</li>
+              <li>MOLT MÉS!</li>
+              <br>
+            </ul>
+            <a class="details" href="html/disseny.html">Veure detalls ➜</a>
+          </article>
+
+          <article class="card" style="background-color: white;">
+            <div class="left">
+              <div class="icon">•••</div>
+              <div>
+                <h3>Regals personalitzat</h3>
+              </div>
+              <ul>
+              <li>Coixins i coixinets</li>
+              <li>Samarretes</li>
+              <li>Tovalloles i mitjons</li>
+              <li>MÉS!</li>
+              </ul>
+            </div>
+            <a class="details" href="html/Altres/Altres.html">Veure tots els serveis ➜</a>
+          </article>
+        </div>
+      </div>
+    </section>
+        <section class="contacto">
+        <div class="contacto-container">
+            <h2>Contacto</h2>
+            <p>¿Tienes alguna pregunta? Envíanos un mensaje</p>
+
+<form id="formulario" class="formulario">
+
+    <div class="grupo">
+        <input type="text" name="nombre" required>
+        <label>Tu Nombre</label>
+    </div>
+
+    <div class="grupo">
+        <input type="email" name="email" required>
+        <label>Tu Email</label>
+    </div>
+
+    <div class="grupo">
+        <input type="tel" name="telefono" required>
+        <label>Tu Teléfono</label>
+    </div>
+
+    <div class="grupo">
+        <textarea name="mensaje" rows="4" required></textarea>
+        <label>Mensaje</label>
+    </div>
+
+    <button type="submit">Enviar Mensaje</button>
+  </form>
+        </div>
+    </section>
+  </main>
+  <footer class="footer">
+  <div class="container">
+
+    <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px; text-align:left; margin-bottom:30px;">
+      
+      <div>
+        <h3>Sobre nosotros</h3>
+        <p style="max-width:250px;">
+          Copisteria Palau comença a l’any 1974, en una botiga molt reduïda i amb una sola màquina de fotocòpies blanc i negre.
+        </p>
+      </div>
+
+      <div>
+        <h3>Enlaces</h3>
+        <ul style="list-style:none; padding:0;">
+          <li><a href="#" style="color:var(--muted); text-decoration:none;">Inicio</a></li>
+          <li><a href="#servicios" style="color:var(--muted); text-decoration:none;">Servicios</a></li>
+          <li><a href="#formulario" style="color:var(--muted); text-decoration:none;">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Redes</h3>
+        <ul style="list-style:none; padding:0;">
+          <li><a href="https://www.instagram.com/copisteriapalau/?hl=es" style="color:var(--muted); text-decoration:none;">Instagram</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div style="border-top:1px solid var(--card-border); padding-top:15px;">
+      © copisteriapalau
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
